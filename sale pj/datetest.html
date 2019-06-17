@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+            var product_data = [
+                {
+                    "productId": "12",
+                    "productName": "ProductA",
+                    "productPrice": "1562",
+                    "ProductDateCreated": "2015-07-24T12:58:17.430Z",
+                    "TotalProduct": 294
+                },
+                {
+                    "productId": "13",
+                    "productName": "ProductB",
+                    "productPrice": "8545",
+                    "TotalProduct": 294,
+                    "ProductHits": {
+                        "2015-08-01T00:00:00Z"
+                    }
+                },
+                {
+                    "productId": "14",
+                    "productName": "ProductC",
+                    "productPrice": "8654",
+                    "TotalProduct": 78,
+                    "ProductHits": {
+                        "2015-08-10T00:00:00Z"
+                    }
+                },
+                {
+                    "productId": "15",
+                    "productName": "ProductD",
+                    "productPrice": "87456",
+                    "TotalProduct": 878,
+                    "ProductHits": {
+                        "2015-05-12T00:00:00Z"
+                    }
+                }
+            ];
+
+            var startDate = "2015-08-04";
+            var endDate = "2015-08-12";
+
+            var resultProductData = product_data.filter(
+                    function (a)
+                    {
+                        return (a.ProductHits) > startDate && (a.ProductHits) < endDate;
+                    });
+            console.log(resultProductData);
+        </script>
+
+
+</body>
+</html>

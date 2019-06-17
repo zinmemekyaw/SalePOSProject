@@ -1,0 +1,60 @@
+body{
+  background-color: #A9CCE3;
+  height: 130%;
+}
+/*.content{
+  background-color: #A3E4D7;
+  width: 100%;
+}*/
+.large-12{
+	font-size: 40px;
+	font-family: Combria, Helvetica, sans-serif;
+	margin-top: 100px;
+	margin-left: 30px;
+	
+}
+.group{
+	padding-top:30px;
+	
+}
+/*#total{
+	
+	margin-right: 5px;
+}*/
+
+
+.btn{
+  background-color: white;
+  border:none;
+  border-style: ridge;
+  color: black;
+  border-spacing: 50px;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.container{
+	margin-top: 30px;
+	margin-left: 100px;
+}
+.table{
+
+	width:70%;
+	margin-top: 50px;
+
+}
+.rotate {
+  /* FF3.5+ */
+  -moz-transform: rotate(-90.0deg);
+  /* Opera 10.5 */
+  -o-transform: rotate(-90.0deg);
+  /* Saf3.1+, Chrome */
+  -webkit-transform: rotate(-90.0deg);
+  /* IE6,IE7 */
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+  /* IE8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+  /* Standard */
+  transform: rotate(-90.0deg);

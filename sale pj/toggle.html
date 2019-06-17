@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    		$("p").hide();
+         
+        $('input[type="checkbox"]').click(function(){
+         	$(this).next().slideToggle(100);
+         });
+    });
+</script>
+</head>
+<body>
+
+<input type="checkbox" name="">Toggle between hiding and showing the paragraphs
+
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+
+</body>
+</html>

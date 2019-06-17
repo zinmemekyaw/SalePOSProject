@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../../Scripts/model.search.js" type="text/javascript"></script>
+<script src="../../Scripts/model.row.js" type="text/javascript"></script>
+<script src="../../Scripts/model.ext.js" type="text/javascript"></script>*@
+@*<script src="../../Scripts/model.defaults.js" type="text/javascript"></script>
+<script src="../../Scripts/model.defaults.columns.js" type="text/javascript"> </script>*@
+<link href="../../Content/jquery.dataTables.css" rel="Stylesheet" type="text/css" /> 
+
+</head>
+<body>
+
+
+
+<table id="table_id">   
+    <thead>        
+        <tr>            
+            <th>Column 1</th>         
+            <th>Column 2</th>          
+            <th>etc</th>       
+        </tr>   
+    </thead> 
+    <tbody>  
+        <tr>       
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>   
+            <td>etc</td>   
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td> 
+            <td>etc</td>  
+       </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+    $('#usersGrid').dataTable({
+        aoData: [{}]
+    }); 
+</script>
+
+<script type="text/jscript">
+    $('#usersGrid').dataTable({
+        aoData: [{}]
+    }); 
+</script> 
+
+</body>
+</html>

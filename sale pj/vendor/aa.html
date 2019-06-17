@@ -1,0 +1,296 @@
+<div class="row report-type-row">
+    <div class="large-12">
+      <span class="report-type-heading ng-binding">Sales Report</span>
+    </div>
+  </div>
+  <div class="row report-controls">
+    <div class="report-control-options">
+      <ul class="button-group drop-down-button-group">
+        <li>
+          <span class="dropdown-label">Report Type</span><div class="dropdown ng-isolate-scope" ng-class="{open: open}" display="item.name" filter="{key: 'type', value: selectedReport.type}" group-by="'menuGroup'" items="reports" selected-item="selectedReport">
+    <div class="dropdown-overlay" ng-click="toggle()"></div>
+    <a ng-click="toggle()" data-dropdown="dd-1" class="button dropdown with-right-chevron" ng-class="{open: open}">
+      <span class="dropdown-item ng-binding">Sales Summary</span><span class="chevron down"></span>
+    </a>
+    <div id="dd-1" data-dropdown-content="" class="f-dropdown">
+      <h3 ng-show="heading" class="dropdown-heading ng-binding ng-hide"></h3>
+      <div class="dropdown-options">
+        <div ng-init="filteredItemGroups = (itemGroups | dropdownItemGroup:filter)"></div>
+        <!-- ngRepeat: items in filteredItemGroups --><!-- ngIf: groupCanBeShown(items) --><ul ng-if="groupCanBeShown(items)" ng-repeat="items in filteredItemGroups" class="dropdown-group ng-scope">
+          <!-- ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope active">
+            <a class="ng-binding">Sales Summary</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items -->
+        </ul><!-- end ngIf: groupCanBeShown(items) --><!-- end ngRepeat: items in filteredItemGroups --><!-- ngIf: groupCanBeShown(items) --><ul ng-if="groupCanBeShown(items)" ng-repeat="items in filteredItemGroups" class="dropdown-group ng-scope">
+          <!-- ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">User</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Outlet</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Register</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Customer</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Customer Group</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items -->
+        </ul><!-- end ngIf: groupCanBeShown(items) --><!-- end ngRepeat: items in filteredItemGroups --><!-- ngIf: groupCanBeShown(items) --><ul ng-if="groupCanBeShown(items)" ng-repeat="items in filteredItemGroups" class="dropdown-group ng-scope">
+          <!-- ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Product</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Brand</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Supplier</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Product type</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Tag</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items -->
+        </ul><!-- end ngIf: groupCanBeShown(items) --><!-- end ngRepeat: items in filteredItemGroups -->
+        <!-- ngIf: shouldShowAdvancedToggle() -->
+      </div>
+    </div>
+</div>
+        </li>
+      </ul>
+      <!-- ngIf: selectedReport.isAggregateSelectableReport() --><ul class="button-group ng-scope" ng-if="selectedReport.isAggregateSelectableReport()">
+        <li>
+          <span class="dropdown-label">Measure</span><div class="dropdown ng-isolate-scope" ng-class="{open: open}" display="metricLabel" items="metrics" selected-item="datatableDefinition.metric">
+    <div class="dropdown-overlay" ng-click="toggle()"></div>
+    <a ng-click="toggle()" data-dropdown="dd-2" class="button dropdown with-right-chevron" ng-class="{open: open}">
+      <span class="dropdown-item ng-binding">Revenue</span><span class="chevron down"></span>
+    </a>
+    <div id="dd-2" data-dropdown-content="" class="f-dropdown">
+      <h3 ng-show="heading" class="dropdown-heading ng-binding ng-hide"></h3>
+      <div class="dropdown-options">
+        <div ng-init="filteredItemGroups = (itemGroups | dropdownItemGroup:filter)"></div>
+        <!-- ngRepeat: items in filteredItemGroups --><!-- ngIf: groupCanBeShown(items) --><ul ng-if="groupCanBeShown(items)" ng-repeat="items in filteredItemGroups" class="dropdown-group ng-scope">
+          <!-- ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Basket Size</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Basket Value</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Basket Value (tax incl)</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Cost of Goods</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Customer Count</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Discount</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Discount %</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">First Sale</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Gross Profit</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Items Sold</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Last Sale</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Margin</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Return %</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Return Count</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope active">
+            <a class="ng-binding">Revenue</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Revenue (tax incl)</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Sales with Customer %</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Tax</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items --><!-- ngIf: itemCanBeShown(i) --><li ng-if="itemCanBeShown(i)" ng-click="select(i)" ng-repeat="i in items" ng-class="{
+              active: isActive(i),
+              'restricted-item': isRestrictedItem(i)
+            }" class="ng-scope">
+            <a class="ng-binding">Transaction Count</a>
+          </li><!-- end ngIf: itemCanBeShown(i) --><!-- end ngRepeat: i in items -->
+        </ul><!-- end ngIf: groupCanBeShown(items) --><!-- end ngRepeat: items in filteredItemGroups -->
+        <!-- ngIf: shouldShowAdvancedToggle() -->
+      </div>
+    </div>
+</div>
+        </li>
+      </ul><!-- end ngIf: selectedReport.isAggregateSelectableReport() -->
+      <!-- ngIf: datatableDefinition.report.hasDateFilter() --><ul class="button-group date-selector-container ng-scope" ng-if="datatableDefinition.report.hasDateFilter()">
+        <li>
+          <span class="dropdown-label ng-binding">Date Range</span><div class="dropdown ng-isolate-scope" ng-class="{open: open}" config="datatableDefinition.report.config.datePicker" granularity-date-selection="datatableDefinition.granularityDateSelection">
+    <div class="dropdown-overlay" ng-click="toggle()"></div>
+    <a ng-click="toggle()" class="date-selector-toggle button dropdown with-right-chevron">
+      <span class="date-selector-set-date ng-binding">29th Apr 2019 -  26th May 2019</span>
+      <span class="chevron down"></span>
+    </a>
+    <div class="f-dropdown date-selector-dropdown drop-down content large f-dropdown--bottom-left" ng-class="{
+           'f-dropdown--bottom-left': dropdownDirection === 'right',
+           'f-dropdown--bottom-right': dropdownDirection === 'left'
+         }">
+      <dl class="date-selector-tabs date-selector-tabs--horizontal">
+        <!-- ngIf: config.all -->
+        <!-- ngIf: config.compare --><dd class="date-selector-tab ng-scope active" ng-class="{active:selectedTab === 'compare'}" ng-if="config.compare">
+          <a class="date-selector-tab-button" ng-click="changeTab('compare')">Compare Dates</a>
+        </dd><!-- end ngIf: config.compare -->
+        <!-- ngIf: config.range --><dd class="date-selector-tab ng-scope" ng-class="{active:selectedTab === 'range'}" ng-if="config.range">
+          <a class="date-selector-tab-button" ng-click="changeTab('range')">Date Range</a>
+        </dd><!-- end ngIf: config.range -->
+      </dl>
+      <form name="granularityDateSelectionForm" id="granularityDateSelectionDropDown" class="date-selector ng-pristine ng-valid ng-valid-min ng-valid-required" ng-submit="confirmDateSelection()" novalidate="">
+
+        <!-- ngIf: selectedTab === 'single' -->
+
+        <!-- ngIf: selectedTab === 'range' -->
+
+        <!-- ngIf: selectedTab === 'compare' --><div ng-form="" name="granularitySelectorForm" ng-if="selectedTab === 'compare'" granularity-date-selection="tempDateSelection" class="ng-pristine ng-valid ng-scope ng-isolate-scope ng-valid-min ng-valid-required"> <dl class="date-selector-tabs"> <!-- ngRepeat: granularity in granularities --><dd class="date-selector-tab ng-scope" ng-repeat="granularity in granularities" ng-class="{active: isActiveGranularity(granularity.key)}"> <a class="date-selector-tab-button ng-binding" ng-click="select(granularity)">Year</a> </dd><!-- end ngRepeat: granularity in granularities --><dd class="date-selector-tab ng-scope" ng-repeat="granularity in granularities" ng-class="{active: isActiveGranularity(granularity.key)}"> <a class="date-selector-tab-button ng-binding" ng-click="select(granularity)">Quarter</a> </dd><!-- end ngRepeat: granularity in granularities --><dd class="date-selector-tab ng-scope" ng-repeat="granularity in granularities" ng-class="{active: isActiveGranularity(granularity.key)}"> <a class="date-selector-tab-button ng-binding" ng-click="select(granularity)">Month</a> </dd><!-- end ngRepeat: granularity in granularities --><dd class="date-selector-tab ng-scope active" ng-repeat="granularity in granularities" ng-class="{active: isActiveGranularity(granularity.key)}"> <a class="date-selector-tab-button ng-binding" ng-click="select(granularity)">Week</a> </dd><!-- end ngRepeat: granularity in granularities --><dd class="date-selector-tab ng-scope" ng-repeat="granularity in granularities" ng-class="{active: isActiveGranularity(granularity.key)}"> <a class="date-selector-tab-button ng-binding" ng-click="select(granularity)">Day</a> </dd><!-- end ngRepeat: granularity in granularities --><dd class="date-selector-tab ng-scope" ng-repeat="granularity in granularities" ng-class="{active: isActiveGranularity(granularity.key)}"> <a class="date-selector-tab-button ng-binding" ng-click="select(granularity)">Hour</a> </dd><!-- end ngRepeat: granularity in granularities --> </dl> <div class="tabs-content date-selector-content"> <ul class="date-selector-options"> <li ng-click="selectPeriodType('to_date')" ng-class="{'date-selector-option--active': isActivePeriodType('to_date')}"> <input id="period_type_to_date" class="radio ng-pristine ng-untouched ng-valid ng-not-empty" type="radio" value="to_date" ng-model="granularityDateSelection.periodType" name="390"> <label class="radio-handle ng-binding" for="period_type_to_date">Week to date </label> </li> <li ng-click="selectPeriodType('last_granularity')" ng-class="{'date-selector-option--active': isActivePeriodType('last_granularity')}"> <input type="radio" class="radio ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="granularityDateSelection.periodType" id="period_type_last_granularity" value="last_granularity" name="391"> <label class="radio-handle ng-binding" for="period_type_last_granularity"> Previous week </label> </li> <li ng-click="selectPeriodType('last')" ng-class="{'date-selector-option--active': isActivePeriodType('last')}" class="date-selector-option--active"> <input id="period_type_last" type="radio" class="radio ng-pristine ng-untouched ng-valid ng-not-empty" value="last" ng-model="granularityDateSelection.periodType" name="392"> <label class="radio-handle" for="period_type_last">Last</label> <input type="number" class="date-selector-period-count ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-min ng-valid-required" id="period_count_last" ng-min="1" ng-model="granularityDateSelection.periodCount" ng-required="granularityDateSelection.periodType === 'last'" required="required"> <label for="period_count_last" class="ng-binding">weeks</label> </li> <li ng-click="selectPeriodType('last_beginning')" ng-class="{'date-selector-option--active': isActivePeriodType('last_beginning')}"> <input type="radio" class="radio ng-pristine ng-untouched ng-valid ng-not-empty" id="period_type_last_beginning" value="last_beginning" ng-model="granularityDateSelection.periodType" name="393"> <label for="period_type_last_beginning" class="radio-handle"></label> <input type="number" class="date-selector-period-count ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-min ng-valid-required" id="period_count_last_beginning" ng-min="1" ng-model="granularityDateSelection.periodCount" ng-required="granularityDateSelection.periodType === 'last_beginning'"> <label for="period_count_last_beginning" class="ng-binding"> weeks, </label> <label for="period_type_last_beginning">from</label> <div class="date-selector-inline-select ng-isolate-scope ng-not-empty ng-valid" granularity="granularityDateSelection.granularity.key" ng-model="granularityDateSelection.selectedDate"> <select ng-show="selectOptions.day" ng-model="day" ng-options="day for day in days" required="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"><option label="1" value="number:1">1</option><option label="2" value="number:2">2</option><option label="3" value="number:3">3</option><option label="4" value="number:4" selected="selected">4</option><option label="5" value="number:5">5</option><option label="6" value="number:6">6</option><option label="7" value="number:7">7</option><option label="8" value="number:8">8</option><option label="9" value="number:9">9</option><option label="10" value="number:10">10</option><option label="11" value="number:11">11</option><option label="12" value="number:12">12</option><option label="13" value="number:13">13</option><option label="14" value="number:14">14</option><option label="15" value="number:15">15</option><option label="16" value="number:16">16</option><option label="17" value="number:17">17</option><option label="18" value="number:18">18</option><option label="19" value="number:19">19</option><option label="20" value="number:20">20</option><option label="21" value="number:21">21</option><option label="22" value="number:22">22</option><option label="23" value="number:23">23</option><option label="24" value="number:24">24</option><option label="25" value="number:25">25</option><option label="26" value="number:26">26</option><option label="27" value="number:27">27</option><option label="28" value="number:28">28</option><option label="29" value="number:29">29</option><option label="30" value="number:30">30</option><option label="31" value="number:31">31</option></select> <select ng-show="selectOptions.month" ng-model="month" ng-options="month for month in months" required="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"><option label="January" value="string:January">January</option><option label="February" value="string:February">February</option><option label="March" value="string:March">March</option><option label="April" value="string:April">April</option><option label="May" value="string:May" selected="selected">May</option><option label="June" value="string:June">June</option><option label="July" value="string:July">July</option><option label="August" value="string:August">August</option><option label="September" value="string:September">September</option><option label="October" value="string:October">October</option><option label="November" value="string:November">November</option><option label="December" value="string:December">December</option></select> <select ng-show="selectOptions.quarter" ng-model="quarter" ng-options="quarter.text for quarter in quarters track by quarter.value" required="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-hide"><option label="Q1" value="1" selected="selected">Q1</option><option label="Q2" value="2">Q2</option><option label="Q3" value="3">Q3</option><option label="Q4" value="4">Q4</option></select> <select ng-show="selectOptions.year" ng-model="year" ng-options="year for year in years" required="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"><option label="2019" value="number:2019" selected="selected">2019</option><option label="2018" value="number:2018">2018</option><option label="2017" value="number:2017">2017</option><option label="2016" value="number:2016">2016</option><option label="2015" value="number:2015">2015</option><option label="2014" value="number:2014">2014</option><option label="2013" value="number:2013">2013</option><option label="2012" value="number:2012">2012</option><option label="2011" value="number:2011">2011</option><option label="2010" value="number:2010">2010</option><option label="2009" value="number:2009">2009</option></select> <select ng-show="selectOptions.hour" ng-model="hour" ng-options="hour for hour in hours" required="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-hide"><option value="?" selected="selected"></option><option label="12" value="number:12">12</option><option label="1" value="number:1">1</option><option label="2" value="number:2">2</option><option label="3" value="number:3">3</option><option label="4" value="number:4">4</option><option label="5" value="number:5">5</option><option label="6" value="number:6">6</option><option label="7" value="number:7">7</option><option label="8" value="number:8">8</option><option label="9" value="number:9">9</option><option label="10" value="number:10">10</option><option label="11" value="number:11">11</option></select> <select ng-show="selectOptions.hour" ng-model="hourPeriod" required="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-hide"> <option value="am">am</option> <option value="pm">pm</option> </select> </div> </li> </ul> </div> </div><!-- end ngIf: selectedTab === 'compare' -->
+
+        <div class="date-selector-footer">
+          <div class="date-selector-footer-section date-selector-footer-section--left">
+          <!-- ngIf: selectedTab === 'single' -->
+          <!-- ngIf: selectedTab !== 'single' --><span class="date-selector-preview ng-binding ng-scope" ng-if="selectedTab !== 'single'">
+            29th Apr 2019 -  26th May 2019
+          </span><!-- end ngIf: selectedTab !== 'single' -->
+          <br><!-- ngIf: isSelectionTooLarge -->
+          </div>
+          <div class="date-selector-footer-section date-selector-footer-section--right">
+          <input type="submit" class="vend-button date-selector-submit" ng-disabled="granularityDateSelectionForm.$invalid || isSelectionTooLarge" ng-class="{'vend-button--disabled': granularityDateSelectionForm.$invalid || isSelectionTooLarge}" value="Apply">
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+        </li>
+      </ul><!-- end ngIf: datatableDefinition.report.hasDateFilter() -->
+      <!-- ngIf: datatableDefinition.canIncludeProducts -->
+    </div>
+    <div class="report-control-actions">
+      <a class="button vend-button vend-button--info report-filter-toggle ng-isolate-scope" ng-class="{ 'vend-button--active': showDatatableFilter }" ng-click="toggleFilter()" filters="datatableDefinition.filters" show-datatable-filter="showDatatableFilter"> <span ng-show="!showDatatableFilter">Filter</span> <span ng-show="showDatatableFilter" class="ng-hide">Remove Filters</span> <span class="icon">filter</span> </a><a class="button vend-button vend-button--info ng-binding ng-isolate-scope" ng-click="download()" definition="datatableDefinition"> Export Data </a>
+    </div>
+  </div>
+</section>
+<section ng-show="showDatatableFilter" class="ng-scope ng-hide">
+  <div class="row report-filter-row">
+    <div class="tag-container ng-isolate-scope tags-empty" ng-class="{'tags-empty': tagsEmpty}" filter-types="availableFilters" tags="datatableDefinition.filters"> <!-- ngRepeat: (key, tag) in tags --> <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input type="text" class="tt-hint" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%;" disabled="" autocomplete="off" spellcheck="false"><input type="text" name="tags" class="tt-input" placeholder="Start typing a brand, customer, customer group or other keyword to filter your report" autocomplete="off" spellcheck="false" style="position: relative; vertical-align: top; background-color: transparent;" dir="auto"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: MS Shell Dlg \32 ; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-Results"></div></span></span> </div>
+  </div>
+</section>
+<div class="row display-option-row ng-scope">
+  <!-- ngIf: showOptions() -->
+</div>
+</section>
+<section class="datatable-container ng-scope">
+  <!-- uiView: datatable --><div class="row ng-scope" ui-view="datatable"><div class="large-12 ng-scope">
+  <vend-datatable config="config" definition="datatableDefinition" report-datatable="reportDatatable" class="ng-isolate-scope"><div class="loading-overlay ng-isolate-scope ng-scope ng-hide" ng-show="loading" loading="reportDatatable.loading"> <div class="spinner" ng-class="positionClass"> <div class="spinner_ball"></div> <div class="spinner_ball"></div> <div class="spinner_ball"></div> </div> </div> <datatable id="datatable-container" ng-hide="reportDatatable.error" class="ng-scope"><table class="datatable datatable--no-rows"><thead><tr class="datatable-col-header-row"><th colspan="2"></th><th colspan="4">2019</th><th class="datatable-row-aggs-header" colspan="5">Totals By Summary</th></tr><tr class="datatable-col-labels-row"><th colspan="2" class="datatable-row-label-label  datatable-row-label-label--last">Summary</th><th class="datatable-col-label datatable-cell--section-start">29th Apr</th><th class="datatable-col-label">6th May</th><th class="datatable-col-label">13th May</th><th class="datatable-col-label datatable-cell--section-end">20th May</th><th class="datatable-row-aggs-label datatable-row-aggs-label--start datatable-order--desc"><a ng-click="orderBy(order, &quot;total_revenue&quot;)">Revenue</a></th><th class="datatable-row-aggs-label "><a ng-click="orderBy(order, &quot;total_cost&quot;)">Cost of Goods</a></th><th class="datatable-row-aggs-label "><a ng-click="orderBy(order, &quot;gross_profit&quot;)">Gross Profit</a></th><th class="datatable-row-aggs-label ">Margin</th><th class="datatable-row-aggs-label "><a ng-click="orderBy(order, &quot;total_tax&quot;)">Tax</a></th><!-- ngIf: showAggregateDropdown --></tr></thead><tbody><tr class="datatable-col-totals-row" ng-show="!reportDatatable.canLoadMore || !reportDatatable.paginated"><th colspan="2">Totals</th><td class="datatable-cell--nullable datatable-cell--section-start">$0<span class="decimals">.00</span></td><td class="datatable-cell--nullable">$0<span class="decimals">.00</span></td><td class="datatable-cell--nullable">$17<span class="decimals">.50</span></td><td class="datatable-cell--nullable datatable-cell--section-end">$0<span class="decimals">.00</span></td><td class="datatable-table-total datatable-table-total--start datatable-cell--nullable">$17<span class="decimals">.50</span></td><td class="datatable-table-total  datatable-cell--nullable">$4<span class="decimals">.50</span></td><td class="datatable-table-total  datatable-cell--nullable">$13<span class="decimals">.00</span></td><td class="datatable-table-total  datatable-cell--nullable">74%</td><td class="datatable-table-total  datatable-cell--nullable">$0<span class="decimals">.00</span></td></tr></tbody><tfoot ng-show="!reportDatatable.canLoadMore  || !reportDatatable.paginated"><tr class="datatable-col-aggs-row"><th rowspan="5" class="datatable-col-aggs-header"><div class="datatable-col-aggs-header-outer"><div class="datatable-col-aggs-header-inner">Totals By Date Range</div></div></th><th colspan="0" class="datatable-col-aggs-label">Revenue</th><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--section-start">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$17<span class="decimals">.50</span></td><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--last-col datatable-cell--section-end">$0<span class="decimals">.00</span></td><td colspan="6" class="datatable-cell-empty"></td></tr><tr class="datatable-col-aggs-row"><th colspan="0" class="datatable-col-aggs-label">Cost of Goods</th><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--section-start">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$4<span class="decimals">.50</span></td><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--last-col datatable-cell--section-end">$0<span class="decimals">.00</span></td><td colspan="6" class="datatable-cell-empty"></td></tr><tr class="datatable-col-aggs-row"><th colspan="0" class="datatable-col-aggs-label">Gross Profit</th><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--section-start">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$13<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--last-col datatable-cell--section-end">$0<span class="decimals">.00</span></td><td colspan="6" class="datatable-cell-empty"></td></tr><tr class="datatable-col-aggs-row"><th colspan="0" class="datatable-col-aggs-label">Margin</th><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--section-start">0%</td><td class="datatable-col-aggs datatable-cell--nullable">0%</td><td class="datatable-col-aggs datatable-cell--nullable">74%</td><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--last-col datatable-cell--section-end">0%</td><td colspan="6" class="datatable-cell-empty"></td></tr><tr class="datatable-col-aggs-row"><th colspan="0" class="datatable-col-aggs-label">Tax</th><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--section-start">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable">$0<span class="decimals">.00</span></td><td class="datatable-col-aggs datatable-cell--nullable datatable-cell--last-col datatable-cell--section-end">$0<span class="decimals">.00</span></td><td colspan="6" class="datatable-cell-empty"></td></tr></tfoot><colgroup><col><col></colgroup><colgroup><col><col><col><col></colgroup><colgroup><col><col><col><col><col></colgroup></table><div class="datatable-footer-actions"><button class="datatable-load-more-button button ng-binding ng-hide" ng-show="reportDatatable.canLoadMore &amp;&amp; reportDatatable.paginated" ng-click="config.loadMore()">Load More…</button></div></datatable> <div class="datatable-no-results-message ng-binding ng-hide ng-scope" ng-show="reportDatatable.noResults"> No data available for this period. </div></vend-datatable>
+</div>
+</div>
+</section>
+</div>
+    </div>
+</div>
+<!-- ngIf: !noTrialBanner --><nv-account-banner ng-if="!noTrialBanner" retailer="retailer" user="user" class="vd-hide-print ng-scope ng-isolate-scope nv-account-banner"><!-- ngIf: ctrl.showTrialBanner && !ctrl.showPastdueBanner --><vd-banner ng-if="ctrl.showTrialBanner &amp;&amp; !ctrl.showPastdueBanner" type="activation" class="ng-scope ng-isolate-scope vd-banner vd-banner--activation vd-flex vd-flex--justify-between vd-flex--align-stretch" role="alert"><!-- ngIf: $ctrl.showBanner --><div class="vd-banner-wrapper vd-flex vd-flex--justify-center ng-scope" ng-if="$ctrl.showBanner">
+  <!-- ngIf: $ctrl.type === 'negative' -->
+  <div ng-transclude="" class="vd-banner-content">
+  <!-- ngIf: ctrl.daysLeft --><span ng-if="ctrl.daysLeft" class="ng-scope">
+    <span class="vd-hide-mobile">You have</span>
+    <strong class="ng-binding">6</strong>
+    <ng-pluralize count="ctrl.daysLeft" when="{'one': 'day','other': 'days'}">days</ng-pluralize>
+    left on your trial.
+  </span><!-- end ngIf: ctrl.daysLeft -->
+  <!-- ngIf: !ctrl.daysLeft -->
+  <a class="vd-link vd-link--secondary pro-activate-link nv-account-banner-action ng-scope" ng-href="https://beedata.vendhq.com/account/activate" href="https://beedata.vendhq.com/account/activate">
+    Activate <span class="vd-hide-mobile">your account</span> now.
+  </a>
+</div>
+</div><!-- end ngIf: $ctrl.showBanner -->
+<!-- ngIf: $ctrl.showBanner --><div ng-transclude="feedback" class="vd-banner-feedback ng-scope ng-hide" ng-show="$ctrl.showFeedback" ng-if="$ctrl.showBanner"></div><!-- end ngIf: $ctrl.showBanner -->
+</vd-banner><!-- end ngIf: ctrl.showTrialBanner && !ctrl.showPastdueBanner -->
+<!-- ngIf: !ctrl.showTrialBanner && ctrl.showPastdueBanner -->
+<!-- ngIf: !ctrl.showTrialBanner && !ctrl.showPastdueBanner && ctrl.showTermsBanner -->
+</nv-account-banner><!-- end ngIf: !noTrialBanner -->
+</nv-main-content>
+  
+
+<div id="vd-viewport-identifier"></div><iframe id="intercom-frame" style="display: none;"></iframe><div id="intercom-css-container"><style data-emotion="intercom-global"></style></div><div id="intercom-container" class="intercom-namespace"><style>html.intercom-mobile-messenger-active,html.intercom-mobile-messenger-active > body,html.intercom-modal-open,#intercom-container-body{overflow:hidden !important;}html.intercom-mobile-messenger-active,html.intercom-mobile-messenger-active > body{position:static !important;}html.intercom-mobile-messenger-active > body{height:0 !important;margin:0 !important;}</style><div class="intercom-app" aria-live="polite"><div id="intercom-modal-container"></div></div></div></body></html>

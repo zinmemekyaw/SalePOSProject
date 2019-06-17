@@ -1,0 +1,23 @@
+
+<html>
+<body>
+<form action="call_list.php" method="get" id="change-date">
+    <div class="input-append datepicker" id="dp3" data-date="2013-02-26" data-date-format="yyyy-mm-dd">
+        <input size="16" type="text" name="date" id="date" value="">
+        <span class="add-on" rel="tooltip" title="choose date"><i class="icon-calendar"></i></span>
+    </div>
+</form>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $('#dp3').on('changeDate', function(ev) {
+            var date = $('#date').val();
+            alert(date);
+            $('#change-date').submit();
+        });
+    });
+</script>
+</body>
+</html>

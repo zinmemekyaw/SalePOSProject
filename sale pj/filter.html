@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>JSON - Date Range Filter Concept</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="https://materializecss.com/templates/starter-template/css/style.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" rel="stylesheet" />
+
+  <link href="filter.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+  </head>
+
+  <body>
+
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">JSON Date Range Filter</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Home</a></li>
+        </ul>
+
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="section">
+
+        <!--   Raw Data Section   -->
+        <div class="row">
+          <div class="col s12">
+            <div class="icon-block">
+              <h4 class="center">Raw Data <small id="count_RawData">(0)</small></h4>
+              <pre id="view_rawData" class="light">
+              <!-- Thank God -->
+              Your raw data will be previewed here
+            </pre>
+            </div>
+          </div>
+        </div>
+
+        <!--Filter Form-->
+        <div class="row center" id="filter_section">
+          <div class="input-field col s6">
+            <input id="date_from" type="text" placeholder="From" class="datepicker">
+          </div>
+          <div class="input-field col s6">
+            <input id="date_to" type="text" placeholder="To" class="datepicker">
+          </div>
+          <button id="filter-button" class="btn-large waves-effect waves-light">Filtra</button>
+        </div>
+
+        <!--   Filtered Data Section   -->
+        <div class="row">
+          <div class="col s12">
+            <div class="icon-block">
+              <h4 class="center">Filtered Data <small id="count_FilteredData">(0)</small></h4>
+              <pre id="view_filteredData" class="light">
+              <!-- Thank God!!! -->
+              Your final data will be previewed here
+            </pre>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br><br>
+    </div>
+ <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--  <script type="text/javascript" src="jquery-3.2.0.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="https://materializecss.com/templates/starter-template/js/init.js"></script>
+<script type="text/javascript" src="https://jsfiddle.net/ladiv7/tb66ya67/"></script>
+<script type="text/javascript" src="datetest1.js"></script>
+
+
+  </body>
+
+</html>
